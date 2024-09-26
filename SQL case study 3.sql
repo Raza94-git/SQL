@@ -1,7 +1,7 @@
 /*
  Problem Statement:
  You are the database developer of an international bank. You are responsible for
- managing the bank’s database. You want to use the data to answer a few
+ managing the bankâ€™s database. You want to use the data to answer a few
  questions about your customers regarding withdrawal, deposit and so on,
  especially about the transaction amount on a particular date across various
  regions of the world. Perform SQL queries to get the key insights of a customer.
@@ -325,9 +325,9 @@ The severity level indicates how serious the error is. In SQL Server, severity l
 It indicates general errors that can be corrected by the user. 
 In this case, it is used to report an application error that doesn't crash the system but needs to be addressed by the user or developer.
 Severity levels:
-0–10: Informational messages, not considered as errors.
-11–16: Errors that the user can fix (like invalid input).
-17–25: System and hardware failures.
+0â€“10: Informational messages, not considered as errors.
+11â€“16: Errors that the user can fix (like invalid input).
+17â€“25: System and hardware failures.
 
 1 (State):
 The state is an integer value that helps identify the location in the code where the error occurred. 
@@ -348,7 +348,7 @@ returns table
 as
 return select top(@n) customer_id, txn_type, txn_amount from [Transaction] where txn_type=@txn_type order by txn_amount desc
 
-drop function top_n_cus
+/*drop function top_n_cus */ -- to drop a function
 
 select * from dbo.top_n_cus(3, 'purchase');
 
