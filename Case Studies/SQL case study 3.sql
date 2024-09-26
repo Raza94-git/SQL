@@ -22,8 +22,11 @@
  txn_amount.
  
  */
+
 create database case_study_3;
 use case_study_3;
+
+-- Import flat files
 
 select * from [transaction]
 /* Transaction is a reserved key word in sql. Hence, we have to enclose it in square bracket to tell sql that it is a table name. */
@@ -107,8 +110,6 @@ as
 select * from [Transaction] where txn_date>'2020-06-30' and customer_id=@customer_id;
 Go
 
-drop procedure cust_details
-
 exec cust_details 75;
 
 /* 7.  Create a stored procedure to insert a record in the Continent table. */
@@ -162,10 +163,6 @@ where region_id=6;
 
  select * from txn_type_total('deposit');
  select * from txn_type_total('purchase');
-
- /* 11. Create a table value function which comprises the columns customer_id,
- region_id ,txn_date , txn_type , txn_amount which will retrieve data from
- the above table */
 
  /* 12.  Create a TRY...CATCH block to print a region id and region name in a
  single column */
